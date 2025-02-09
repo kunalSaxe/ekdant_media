@@ -5,7 +5,8 @@ import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
-
+import Marquee from "react-fast-marquee";
+import { SvgIcon } from "../../common/SvgIcon";
 const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
@@ -24,6 +25,29 @@ const Home = () => {
         icon="developer.svg"
         id="intro"
       />
+        <Marquee gradient={false} speed={50} pauseOnHover={true} loop={0} autoFill={true}>
+        <div className="marquee-container" style={{display:"flex"}}>
+          <div className="marquee-item">
+            <SvgIcon src="ekdant-02.svg" width="200px" height="120px" />
+            {/* <span>Web Designing</span> */}
+          </div>
+
+          <div className="marquee-item">
+          <SvgIcon src="ekdant-02.svg" width="200px" height="120px" />
+            {/* <span>Digital Marketing</span> */}
+          </div>
+
+          <div className="marquee-item">
+          <SvgIcon src="ekdant-02.svg" width="200px" height="120px" />
+            {/* <span>SEO Optimization</span> */}
+          </div>
+
+          <div className="marquee-item">
+          <SvgIcon src="ekdant-02.svg" width="200px" height="120px" />
+            {/* <span>Branding</span> */}
+          </div>
+        </div>
+      </Marquee>
       <MiddleBlock
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
